@@ -38,12 +38,12 @@ namespace Player.InputHandler
 
         private void OnCollisionEnter2D (Collision2D collision)
         {
-            if (collision.collider.tag is "Chao") { EstaNoChao = true; }
+            if (collision.collider.tag is "Chao") { _EstaNoChao = true; }
         }
 
         private void OnCollisionExit2D (Collision2D collision)
         {
-            if (collision.collider.tag is "Chao") { EstaNoChao = false; }
+            if (collision.collider.tag is "Chao") { _EstaNoChao = false; }
         }
     }
 }
