@@ -10,43 +10,30 @@ namespace Player.InputHandler
     public class PlayerInputHandler : MonoBehaviour
     {
         #region Private Field´s
-        private Rigidbody2D rb;
-        private Transform _transform;
         private bool EstaNoChao = true;
         #endregion
 
-        #region Get | Set
-        public Rigidbody2D Rb { get => rb; private set => rb = value; }
-        public Transform Transform { get => _transform; private set => _transform = value; }
-        #endregion
-
         #region Serialize Field
-        [SerializeField][Range (0.15f, 0.60f)] float speed;
-        [SerializeField][Range (300f, 700f)] float jumpForce;
+        [SerializeField][Range (0.15f, 0.60f)] float speed = 0.15f;
+        [SerializeField][Range (300f, 700f)] float jumpForce = 300f;
+        [SerializeField] private PlayerComponets PlayerComponets;
         #endregion
-
-        private void Awake ()
-        {
-            Rb = GetComponent<Rigidbody2D> ();
-            Transform = GetComponent<Transform> ();
-        }
 
         private void Update ()
         {
-            MovimentacaoHorizontal ();
-            Jump ();
+            MovimentacaoHorizontal(Input.GetAxisRaw("Horizontal"), PlayerComponets.Transform);
+            Jump (Input.GetKeyDown(KeyCode.Space), PlayerComponets.Rb);            
         }
 
-        private void MovimentacaoHorizontal ()
+        private void MovimentacaoHorizontal (float axis, Transform transform)
         {
-            if (Input.GetAxisRaw ("Horizontal") > 0) { _transform.Translate (Vector2.right * speed); }
+            if (axis > 0) { transform.Translate (Vector2.right * speed); }
 
-            if (Input.GetAxisRaw ("Horizontal") < 0) { _transform.Translate (Vector2.left * speed); }
+            if (axis < 0) { transform.Translate (Vector2.left * speed); }
         }
-
-        private void Jump ()
+        private void Jump (bool bind, Rigidbody2D rb)
         {
-            if (Input.GetKeyDown (KeyCode.Space) && EstaNoChao is true) { rb.AddForce (Vector2.up * jumpForce); }
+            if (bind is true && EstaNoChao is true) { rb.AddForce (Vector2.up * jumpForce); }
         }
 
         private void OnCollisionEnter2D (Collision2D collision)
