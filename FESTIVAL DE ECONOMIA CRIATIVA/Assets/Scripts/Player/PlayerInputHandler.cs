@@ -1,7 +1,7 @@
 ﻿#region Using
 
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 #endregion
 namespace Assets.Scripts.Player
 {
