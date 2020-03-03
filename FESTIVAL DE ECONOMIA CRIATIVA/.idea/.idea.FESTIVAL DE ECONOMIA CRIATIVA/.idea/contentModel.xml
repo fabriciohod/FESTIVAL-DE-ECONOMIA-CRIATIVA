@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\fahod\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_FESTIVAL DE ECONOMIA CRIATIVA.-776910577.00" t="ExcludeRecursive" />
-    <e p="F:\GitHub\FESTIVAL-DE-ECONOMIA-CRIATIVA\FESTIVAL DE ECONOMIA CRIATIVA" t="IncludeRecursive">
+    <e p="C:\Users\fahod\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_FESTIVAL DE ECONOMIA CRIATIVA.-67594620.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fahod\Documents\Programas\Git Cloner\FESTIVAL-DE-ECONOMIA-CRIATIVA\FESTIVAL DE ECONOMIA CRIATIVA" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1369,6 +1369,7 @@
           <e p="EntityComponet.cs" t="Include" />
           <e p="LifeSysteam.cs" t="Include" />
           <e p="Player" t="Include">
+            <e p="PlayerAnimController.cs" t="Include" />
             <e p="PlayerInputHandler.cs" t="Include" />
           </e>
         </e>
