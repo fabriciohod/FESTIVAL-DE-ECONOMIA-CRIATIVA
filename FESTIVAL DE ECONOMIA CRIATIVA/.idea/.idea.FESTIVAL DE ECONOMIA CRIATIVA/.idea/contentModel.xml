@@ -1370,6 +1370,7 @@
           <e p="LifeSysteam.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="PlayerAnimController.cs" t="Include" />
+            <e p="PlayerAttack.cs" t="Include" />
             <e p="PlayerInputHandler.cs" t="Include" />
           </e>
         </e>

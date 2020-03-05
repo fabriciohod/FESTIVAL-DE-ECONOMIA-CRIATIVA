@@ -10,35 +10,41 @@ namespace Assets.Scripts.Player
         public bool EstaNoChao { get; private set; } = true;
         public float Axis { get; private set; }
         private EntityComponet _playerComponets;
+        private PlayerAttack _attack;
+
         #endregion
 
         #region Serialize Field
-        [SerializeField] [Range(0.15f, 0.60f)] private float _speed = 0.15f;
+
+        [SerializeField] [Range(0f, 0.60f)] private float _speed = 0.15f;
         [SerializeField] [Range(300f, 700f)] private float _jumpForce = 300f;
+
         #endregion
 
         private void Awake()
         {
+            _attack = GetComponent<PlayerAttack>();
             _playerComponets = GetComponent<EntityComponet>();
         }
 
         private void Update()
         {
             MovimentacaoHorizontal(Input.GetAxisRaw("Horizontal"), _playerComponets.Transform);
-            Jump(Input.GetKeyDown(KeyCode.Space), _playerComponets.Rb);    
+            Jump(Input.GetKeyDown(KeyCode.Space), _playerComponets.Rb);
+            _attack.Atirando(Input.GetKeyDown(KeyCode.Z));
         }
 
-        private void MovimentacaoHorizontal(float _axis, Transform transform)
+        private void MovimentacaoHorizontal(float axis, Transform transformP)
         {
-            Axis = _axis;
-            if (_axis > 0)
+            Axis = axis;
+            if (axis > 0)
             {
-               transform.Translate(Vector2.right * _speed);
+                transformP.Translate(Vector2.right * _speed);
             }
 
-            if (_axis < 0)
+            if (axis < 0)
             {
-                transform.Translate(Vector2.left * _speed);
+                transformP.Translate(Vector2.left * _speed);
             }
         }
 
@@ -52,7 +58,7 @@ namespace Assets.Scripts.Player
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.tag is "Chao")
+            if (collision.collider.CompareTag("Chao"))
             {
                 EstaNoChao = true;
             }
@@ -60,7 +66,7 @@ namespace Assets.Scripts.Player
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            if (collision.collider.tag is "Chao")
+            if (collision.collider.CompareTag("Chao"))
             {
                 EstaNoChao = false;
             }
