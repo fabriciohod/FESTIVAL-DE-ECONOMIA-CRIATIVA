@@ -1366,7 +1366,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Bullet.cs" t="Include" />
           <e p="EntityComponet.cs" t="Include" />
+          <e p="FlipTranform.cs" t="Include" />
           <e p="LifeSysteam.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="PlayerAnimController.cs" t="Include" />

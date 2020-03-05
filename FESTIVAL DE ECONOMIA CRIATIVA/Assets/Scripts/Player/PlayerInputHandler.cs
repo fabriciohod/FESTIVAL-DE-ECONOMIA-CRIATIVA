@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Player
+namespace Player
 {
     [RequireComponent(typeof(EntityComponet))]
     public class PlayerInputHandler : MonoBehaviour
@@ -16,11 +16,11 @@ namespace Assets.Scripts.Player
 
         #region Serialize Field
 
-        [SerializeField] [Range(0f, 0.60f)] private float _speed ;
+        [SerializeField] [Range(0f, 0.60f)] private float _speed;
         [SerializeField] private float _jumpForce;
 
         #endregion
-
+        
         private void Awake()
         {
             _attack = GetComponent<PlayerAttack>();

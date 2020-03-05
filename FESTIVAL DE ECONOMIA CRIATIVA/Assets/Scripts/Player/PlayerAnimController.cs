@@ -1,16 +1,22 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
-namespace Assets.Scripts.Player
+namespace Player
 {
     public class PlayerAnimController : MonoBehaviour
     {
         private PlayerInputHandler _input;
         private EntityComponet _playerComponet;
+        private readonly int _estaCorrendo = Animator.StringToHash("EstaCorrendo");
+        private readonly int _estaPulando = Animator.StringToHash("EstaPulando");
+
+        private FlipTranform _arma;
 
         private void Awake()
         {
             _input = GetComponent<PlayerInputHandler>();
             _playerComponet = GetComponent<EntityComponet>();
+            _arma = GetComponentInChildren<FlipTranform>();
         }
 
         private void Update()
@@ -19,36 +25,36 @@ namespace Assets.Scripts.Player
             AnimPulo(_input.EstaNoChao);
         }
 
-        private void AnimAndar(float _axis)
+        private void AnimAndar(float axis)
         {
-            if (_axis > 0)
+            if (axis > 0)
             {
                 _playerComponet.Render.flipX = false;
-                _playerComponet.Anim.SetBool("EstaCorrendo", true);
+                _playerComponet.Anim.SetBool(_estaCorrendo, true);
+                _arma.InverseFlip();
             }
-            else if (_axis < 0)
+            else if (axis < 0)
             {
                 _playerComponet.Render.flipX = true;
-                _playerComponet.Anim.SetBool("EstaCorrendo", true);
+                _playerComponet.Anim.SetBool(_estaCorrendo, true);
+                _arma.Flip();
             }
             else
             {
-                _playerComponet.Anim.SetBool("EstaCorrendo", false);
+                _playerComponet.Anim.SetBool(_estaCorrendo, false);
             }
         }
 
         private void AnimPulo(bool estaNoChao)
         {
-        
             if (estaNoChao is false)
             {
-                _playerComponet.Anim.SetBool("EstaPulando", true);
+                _playerComponet.Anim.SetBool(_estaPulando, true);
             }
             else
             {
-                _playerComponet.Anim.SetBool("EstaPulando", false);
+                _playerComponet.Anim.SetBool(_estaPulando, false);
             }
-            
         }
     }
 }

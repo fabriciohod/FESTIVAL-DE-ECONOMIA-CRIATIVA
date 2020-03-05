@@ -1,26 +1,24 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Player
+namespace Player
 {
     [RequireComponent(typeof(PlayerInputHandler))]
     public class PlayerAttack : MonoBehaviour
     {
         [SerializeField] private GameObject _preFab;
         [SerializeField] private Transform _arma;
-        public float velociade;
-        private Rigidbody2D rb;
         private PlayerInputHandler _input;
-
 
         private void Awake()
         {
+            _input = GetComponent<PlayerInputHandler>();
         }
 
         public void Atirando(bool bind)
         {
             if (bind is true)
             {
-                GameObject go = Instantiate(_preFab);
+                Instantiate(_preFab, _arma.position, _arma.rotation);
             }
         }
     }
