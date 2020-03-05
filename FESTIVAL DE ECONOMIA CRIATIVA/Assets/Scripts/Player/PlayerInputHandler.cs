@@ -16,8 +16,8 @@ namespace Assets.Scripts.Player
 
         #region Serialize Field
 
-        [SerializeField] [Range(0f, 0.60f)] private float _speed = 0.15f;
-        [SerializeField] [Range(300f, 700f)] private float _jumpForce = 300f;
+        [SerializeField] [Range(0f, 0.60f)] private float _speed ;
+        [SerializeField] private float _jumpForce;
 
         #endregion
 
