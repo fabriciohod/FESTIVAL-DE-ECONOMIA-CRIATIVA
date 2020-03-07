@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _velociade;
     [SerializeField] private int _dano;
+    [SerializeField] private int _tempoParaDestroir = 4;
     private Rigidbody2D _rb;
-
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -15,13 +16,13 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         _rb.velocity = transform.right * _velociade;
+        StartCoroutine(DestroirObj(_tempoParaDestroir));
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    //TODO: Implemnetar dano
+    private IEnumerator DestroirObj(int tempo)
     {
-        //TODO: Implemnetar dano e detruir os PreFabs depois de um tempo
-        throw new System.NotImplementedException();
+        yield return new WaitForSecondsRealtime(tempo);
+        Destroy(gameObject);
     }
-
-    
 }
