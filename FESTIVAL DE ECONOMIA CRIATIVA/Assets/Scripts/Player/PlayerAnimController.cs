@@ -9,14 +9,10 @@ namespace Player
         private EntityComponet _playerComponet;
         private readonly int _estaCorrendo = Animator.StringToHash("EstaCorrendo");
         private readonly int _estaPulando = Animator.StringToHash("EstaPulando");
-
-        private FlipTranform _arma;
-
         private void Awake()
         {
             _input = GetComponent<PlayerInputHandler>();
             _playerComponet = GetComponent<EntityComponet>();
-            _arma = GetComponentInChildren<FlipTranform>();
         }
 
         private void Update()
@@ -29,15 +25,14 @@ namespace Player
         {
             if (axis > 0)
             {
-                _playerComponet.Render.flipX = false;
                 _playerComponet.Anim.SetBool(_estaCorrendo, true);
-                _arma.InverseFlip();
+                _playerComponet.Transform.localScale = new Vector3(1f ,1f ,1f);
             }
             else if (axis < 0)
             {
                 _playerComponet.Render.flipX = true;
                 _playerComponet.Anim.SetBool(_estaCorrendo, true);
-                _arma.Flip();
+                _playerComponet.Transform.localScale = new Vector3(-1f ,1f ,1f);
             }
             else
             {
