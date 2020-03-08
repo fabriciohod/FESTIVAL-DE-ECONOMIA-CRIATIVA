@@ -1,20 +1,21 @@
-﻿using UnityEngine;
+﻿using Player.Script;
+using UnityEngine;
 
 [RequireComponent(typeof(LifeSysteam), typeof(Rigidbody2D))]
 public class EntityComponet : MonoBehaviour
 {
-    public Rigidbody2D Rb { get; private set; }
-    public Transform Transform { get; private set; }
-    public SpriteRenderer Render { get; private set; }
-    public Animator Anim { get; private set; }
-    public LifeSysteam Health { get; private set; }
+    public Rigidbody2D RigidbodyEntity { get; private set; }
+    public Transform TransformEntity { get; private set; }
+    public SpriteRenderer RenderEntity { get; private set; }
+    public Animator AnimEntity { get; private set; }
+    public LifeSysteam HealthEntity { get; private set; }
 
     private void Awake()
     {
-        Rb = GetComponent<Rigidbody2D>();
-        Transform = GetComponent<Transform>();
-        Render = GetComponent<SpriteRenderer>();
-        Anim = GetComponent<Animator>();
-        Health = GetComponent<LifeSysteam>();
+        RigidbodyEntity = GetComponent<Rigidbody2D>();
+        TransformEntity = GetComponent<Transform>();
+        RenderEntity = GetComponent<SpriteRenderer>();
+        AnimEntity = GetComponent<Animator>();
+        HealthEntity = GetComponent<LifeSysteam>();
     }
 }

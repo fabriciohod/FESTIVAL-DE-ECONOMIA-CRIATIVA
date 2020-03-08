@@ -16,13 +16,16 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acbaeaaa-19b1-40cb-a0a2-b44effe27faf" name="Default" comment="">
+    <list default="true" id="acbaeaaa-19b1-40cb-a0a2-b44effe27faf" name="Default" comment="Refactor part 2 :D">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FESTIVAL DE ECONOMIA CRIATIVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FESTIVAL DE ECONOMIA CRIATIVA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +37,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///PlayerAnimController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///EntityComponet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.Peek/Editor/Probe/ProbeHit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///PlayerInputHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LifeSysteam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Script/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +117,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerComponets.cs" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -155,8 +161,16 @@
       <workItem from="1583610035435" duration="5178000" />
       <workItem from="1583615244399" duration="2829000" />
       <workItem from="1583622197276" duration="1540000" />
-      <workItem from="1583623772290" duration="3105000" />
+      <workItem from="1583623772290" duration="3659000" />
     </task>
+    <task id="LOCAL-00001" summary="Refactor part 2 :D">
+      <created>1583627207916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583627207916</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +190,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor part 2 :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor part 2 :D" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="818" y="461" width="727" height="318" key="#C#" timestamp="1583501170411">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -190,10 +208,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="691" y="243" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583500786291" />
-    <state x="491" y="170" key="SettingsEditor" timestamp="1583623736700">
+    <state x="491" y="170" key="SettingsEditor" timestamp="1583627390192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="491" y="170" key="SettingsEditor/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583623736700" />
+    <state x="491" y="170" key="SettingsEditor/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583627390192" />
     <state x="92" y="93" width="1736" height="865" key="VCS.FileHistoryDialog" timestamp="1583625849378">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
