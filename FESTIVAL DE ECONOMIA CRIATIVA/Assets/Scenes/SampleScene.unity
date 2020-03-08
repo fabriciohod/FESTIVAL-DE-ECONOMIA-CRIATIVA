@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40325eca567953f499ddfcfd54295457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 0
+  life: 0
 --- !u!95 &2051516508
 Animator:
   serializedVersion: 3
@@ -1163,8 +1163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e819742641292847a5cf6e614673d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.03
-  _jumpForce: 200
+  speed: 0.03
+  jumpForce: 200
 --- !u!114 &2051516513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,5 +1220,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d341146cbc6543c6add1df203e4766e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _preFab: {fileID: 7882284919359494914, guid: ead10a2f781935d4ca12eca801a3795d, type: 3}
-  _arma: {fileID: 615743661}
+  preFab: {fileID: 7882284919359494914, guid: f23be551b81b41119f212c40d745ed44, type: 3}
+  arma: {fileID: 615743661}

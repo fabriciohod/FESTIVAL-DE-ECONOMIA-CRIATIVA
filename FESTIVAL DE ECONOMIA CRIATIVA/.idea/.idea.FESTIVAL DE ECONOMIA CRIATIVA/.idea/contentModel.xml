@@ -12,7 +12,6 @@
           <e p="Prefab´s" t="Include">
             <e p="Tiro" t="Include">
               <e p="Bullet.cs" t="Include" />
-              <e p="PreFabTirro.prefab" t="Include" />
             </e>
           </e>
           <e p="Script" t="Include">

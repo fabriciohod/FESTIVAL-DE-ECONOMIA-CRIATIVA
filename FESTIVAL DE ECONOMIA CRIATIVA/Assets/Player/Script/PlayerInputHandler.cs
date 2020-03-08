@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Player.Script
@@ -17,6 +18,7 @@ namespace Player.Script
 
         public bool EstaNoChao { get; private set; } = true;
         public float Axis { get; private set; }
+        public bool EstaArirando { get; private set; }
 
         #endregion
 
@@ -38,9 +40,15 @@ namespace Player.Script
 
         private void Update()
         {
+            #region Movimentacao
             MovimentacaoHorizontal(Input.GetAxisRaw("Horizontal"), _playerComponets.TransformEntity);
             Jump(Input.GetKeyDown(KeyCode.Space), _playerComponets.RigidbodyEntity);
-            _attack.Atirando(Input.GetKeyDown(KeyCode.Z));
+            #endregion
+
+            #region Ataque
+            _attack.Atirando(EstaArirando = Input.GetKeyUp(KeyCode.Z));
+            _attack.GunTransform(_playerComponets.TransformEntity);
+            #endregion
         }
 
         private void MovimentacaoHorizontal(float axis, Transform transformP)
@@ -50,7 +58,6 @@ namespace Player.Script
             {
                 transformP.Translate(Vector2.right * speed);
             }
-
             if (axis < 0)
             {
                 transformP.Translate(Vector2.left * speed);
