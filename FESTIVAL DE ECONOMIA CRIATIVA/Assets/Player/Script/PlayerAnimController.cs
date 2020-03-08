@@ -5,8 +5,8 @@ namespace Player.Script
     public class PlayerAnimController : MonoBehaviour
     {
         #region Field´s
-        private (bool estaNoChao, float axis) _input;
-        private EntityComponet _player;
+        private (bool estaNoChao, float axis) _player;
+        private EntityComponet _playercComponet;
         private Animator _playerAnimator;
         private Transform _playerTransform;
         #endregion
@@ -19,16 +19,16 @@ namespace Player.Script
         private void Awake()
         {
             var playerInputHandler = GetComponent<PlayerInputHandler>();
-            _player = GetComponent<EntityComponet>();
-            _input = (playerInputHandler.EstaNoChao, playerInputHandler.Axis);
-            _playerAnimator = _player.AnimEntity;
-            _playerTransform = _player.transform;
+            _playercComponet = GetComponent<EntityComponet>();
+            _player = (playerInputHandler.EstaNoChao, playerInputHandler.Axis);
+            _playerAnimator = _playercComponet.AnimEntity;
+            _playerTransform = _playercComponet.transform;
         }
 
         private void Update()
         {
-            AnimAndar(_input.axis, _playerTransform, _playerAnimator);
-            AnimPulo(_input.estaNoChao, _playerAnimator);
+            AnimAndar(_player.axis, _playerTransform, _playerAnimator);
+            AnimPulo(_player.estaNoChao, _playerAnimator);
         }
 
         private void AnimAndar(float axis, Transform transformP, Animator animator)
