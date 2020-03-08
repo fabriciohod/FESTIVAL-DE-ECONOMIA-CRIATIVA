@@ -38,8 +38,8 @@ namespace Player.Script
 
         private void Update()
         {
-            MovimentacaoHorizontal(Input.GetAxisRaw("Horizontal"), _playerComponets.Transform);
-            Jump(Input.GetKeyDown(KeyCode.Space), _playerComponets.Rb);
+            MovimentacaoHorizontal(Input.GetAxisRaw("Horizontal"), _playerComponets.TransformEntity);
+            Jump(Input.GetKeyDown(KeyCode.Space), _playerComponets.RigidbodyEntity);
             _attack.Atirando(Input.GetKeyDown(KeyCode.Z));
         }
 

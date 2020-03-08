@@ -20,23 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbaeaaa-19b1-40cb-a0a2-b44effe27faf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Player/Prefab´s.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro/PreFabTirro.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FESTIVAL DE ECONOMIA CRIATIVA/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FESTIVAL DE ECONOMIA CRIATIVA/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FESTIVAL DE ECONOMIA CRIATIVA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FESTIVAL DE ECONOMIA CRIATIVA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerAttack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player/atira/PreFabTirro.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro/PreFabTirro.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro/Bullet.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LifeSysteam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LifeSysteam.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Ludiq.PeekCore.Editor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Ludiq.PeekCore.Editor.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Ludiq.PeekCore.Runtime.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Ludiq.PeekCore.Runtime.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.PeekCore/Editor/Decorators/SingleDecoratorProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.PeekCore/Editor/Decorators/MultiDecoratorProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.PeekCore/Runtime/Collections/KeyedCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///EntityComponet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.PeekCore/Editor/Dependencies/ReflectionMagic/PrivateReflectionDynamicObjectInstance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Ludiq/Ludiq.PeekCore/Runtime/Dependencies/FullSerializer/fsSerializer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -81,11 +69,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Script/PlayerAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Prefab´s/Tiro/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LifeSysteam.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntityComponet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Script/PlayerAnimController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player/Script/PlayerInputHandler.cs" />
       </list>
     </option>
   </component>
@@ -167,7 +155,7 @@
       <workItem from="1583610035435" duration="5178000" />
       <workItem from="1583615244399" duration="2829000" />
       <workItem from="1583622197276" duration="1540000" />
-      <workItem from="1583623772290" duration="1187000" />
+      <workItem from="1583623772290" duration="3105000" />
     </task>
     <servers />
   </component>
@@ -193,11 +181,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="818" y="461" width="727" height="318" key="#C#/0.0.1920.1040@0.0.1920.1040" timestamp="1583501170411" />
-    <state x="540" y="268" key="IDE.errors.dialog" timestamp="1583614871209">
+    <state x="540" y="268" key="IDE.errors.dialog" timestamp="1583625151009">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="265" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583501162289" />
-    <state x="540" y="268" key="IDE.errors.dialog/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583614871209" />
+    <state x="540" y="268" key="IDE.errors.dialog/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583625151009" />
     <state x="691" y="243" key="RiderGenerateDialog" timestamp="1583500786291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -206,11 +194,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="491" y="170" key="SettingsEditor/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583623736700" />
-    <state x="92" y="93" width="1736" height="865" key="VCS.FileHistoryDialog" timestamp="1583623502144">
+    <state x="92" y="93" width="1736" height="865" key="VCS.FileHistoryDialog" timestamp="1583625849378">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583500816151" />
-    <state x="92" y="93" width="1736" height="865" key="VCS.FileHistoryDialog/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583623502144" />
+    <state x="92" y="93" width="1736" height="865" key="VCS.FileHistoryDialog/0.0.1920.1050/1920.90.1600.900@0.0.1920.1050" timestamp="1583625849378" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1583457224751">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
