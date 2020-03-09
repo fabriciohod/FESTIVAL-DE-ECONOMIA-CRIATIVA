@@ -54,35 +54,22 @@ namespace Player.Script
         private void MovimentacaoHorizontal(float axis, Transform transformP)
         {
             Axis = axis;
-            if (axis > 0)
-            {
-                transformP.Translate(Vector2.right * speed);
-            }
-            if (axis < 0)
-            {
-                transformP.Translate(Vector2.left * speed);
-            }
+            if (axis > 0) transformP.Translate(Vector2.right * speed);
+            if (axis < 0) transformP.Translate(Vector2.left * speed);
         }
 
         private void Jump(bool bind, Rigidbody2D rb)
         {
             if (bind && EstaNoChao) rb.AddForce(Vector2.up * jumpForce);
         }
-
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.CompareTag("Chao"))
-            {
-                EstaNoChao = true;
-            }
+            if (collision.collider.CompareTag("Chao")) EstaNoChao = true;
         }
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            if (collision.collider.CompareTag("Chao"))
-            {
-                EstaNoChao = false;
-            }
+            if (collision.collider.CompareTag("Chao")) EstaNoChao = false;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Player.Tiro
@@ -16,18 +17,23 @@ namespace Player.Tiro
         {
             _rb = GetComponent<Rigidbody2D>();
         }
-
         private void Update()
         {
             _rb.velocity = transform.right * velociade;
             StartCoroutine(DestroirObj(tempoParaDestroir));
         }
-
-        //TODO: Implemnetar dano
         private IEnumerator DestroirObj(int tempo)
         {
             yield return new WaitForSecondsRealtime(tempo);
             Destroy(gameObject);
+        }
+        //checando se a colisão e dando dano
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.CompareTag("Inimigo"))
+            {
+                collision.gameObject.GetComponent<LifeSysteam>().TomarDano(4);
+            }
         }
     }
 }

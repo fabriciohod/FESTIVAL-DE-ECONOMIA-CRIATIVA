@@ -39,18 +39,12 @@ namespace Player.Script
             if (axis > 0)
             {
                 _playercComponet.TransformEntity.localScale = new Vector3(1, 1, 1);
-                if (bind == true)
-                {
-                    _playercComponet.AnimEntity.SetBool(_tiroCorrendo, true);
-                }
+                if (bind == true) _playercComponet.AnimEntity.SetBool(_tiroCorrendo, true);
             }
             else if (axis < 0)
             {
                 _playercComponet.TransformEntity.localScale = new Vector3(-1, 1, 1);
-                if (bind == true)
-                {
-                    _playercComponet.AnimEntity.SetBool(_tiroCorrendo, true);
-                }
+                if (bind == true) _playercComponet.AnimEntity.SetBool(_tiroCorrendo, true);
             }
             else //TODO: arrumar o timing da animção do tirro parado
             {

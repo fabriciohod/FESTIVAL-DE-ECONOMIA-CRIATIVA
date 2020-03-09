@@ -11,15 +11,13 @@ public class LifeSysteam : MonoBehaviour
     {
         life = Life;
     }
-
     private void Update()
     {
-        if (Life >= 0)
+        if (Life <= 0)
         {
             //TODO: Colocar a sena de derrota aqui
             //SceneManager.LoadScene();
         }
     }
-
     public void TomarDano(int dano) => Life += Life - dano;
 }
